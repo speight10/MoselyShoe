@@ -1,26 +1,27 @@
 /*!
- * Start Bootstrap - Agency Bootstrap Theme (http://startbootstrap.com)
- * Code licensed under the Apache License v2.0.
- * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ * Start Bootstrap - Agency v3.3.7+1 (http://startbootstrap.com/template-overviews/agency)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  */
-
-// jQuery for page scrolling feature - requires jQuery Easing plugin
-$(function() {
-    $('a.page-scroll').bind('click', function(event) {
-        var $anchor = $(this);
-        $('html, body').stop().animate({
-            scrollTop: $($anchor.attr('href')).offset().top
-        }, 1500, 'easeInOutExpo');
-        event.preventDefault();
-    });
-});
-
-// Highlight the top nav as scrolling occurs
-$('body').scrollspy({
-    target: '.navbar-fixed-top'
-})
-
-// Closes the Responsive Menu on Menu Item Click
-$('.navbar-collapse ul li a').click(function() {
-    $('.navbar-toggle:visible').click();
-});
+!function(t) {
+    "use strict";
+    t("a.page-scroll").bind("click", function(a) {
+        var o = t(this);
+        t("html, body").stop().animate({
+            scrollTop: t(o.attr("href")).offset().top - 50
+        }, 1250, "easeInOutExpo"),
+        a.preventDefault()
+    }),
+    t("body").scrollspy({
+        target: ".navbar-fixed-top",
+        offset: 51
+    }),
+    t(".navbar-collapse ul li a").click(function() {
+        t(".navbar-toggle:visible").click()
+    }),
+    t("#mainNav").affix({
+        offset: {
+            top: 100
+        }
+    })
+}(jQuery);

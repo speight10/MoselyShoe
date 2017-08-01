@@ -1,27 +1,31 @@
 package com.Mosely.shoe.controller.model;
 
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
+import org.hibernate.validator.constraints.Email;
+import org.hibernate.validator.constraints.NotEmpty;
+
 public class Contact {
 	
-	
-	private String firstName;
-	private String lastName;
+	@NotNull
+	@Size(min=2, max=30)
+	private String Name;
+	@NotNull
 	private String phoneNumber;
+	@NotNull
 	private String message;
+	
+	@NotEmpty @Email
 	private String email;
 	
 	
-	
-	public String getFirstName() {
-		return firstName;
+
+	public String getName() {
+		return Name;
 	}
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
-	public String getLastName() {
-		return lastName;
-	}
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
+	public void setName(String name) {
+		Name = name;
 	}
 	public String getPhoneNumber() {
 		return phoneNumber;
