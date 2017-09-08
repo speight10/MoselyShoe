@@ -1,0 +1,6 @@
+eclipse.preferences.version=1
+org.jboss.tools.openshift.ApplicationId=577ab6570c1e66239f0000ce
+org.jboss.tools.openshift.ApplicationName=jbosswildfly
+org.jboss.tools.openshift.Connection=https\://speight10%40comcast.net@openshift.redhat.com
+org.jboss.tools.openshift.Domain=eagle1
+org.jboss.tools.openshift.RemoteName=Openshift
